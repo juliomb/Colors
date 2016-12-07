@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Colores" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_txt_colores" translatesAutoresizingMaskIntoConstraints="NO" id="I47-Eb-GgR">
+                                <rect key="frame" x="52" y="155" width="271" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="AFp-s4-E47"/>
+                                    <constraint firstAttribute="width" constant="271" id="hWm-Kb-Ihe"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTL-1g-Uea">
+                                <rect key="frame" x="106" y="28" width="162" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="5v2-Sw-3sg"/>
+                                    <constraint firstAttribute="height" constant="105" id="fOa-Dc-7LF"/>
+                                </constraints>
+                                <state key="normal" image="img_switch_off"/>
+                                <connections>
+                                    <action selector="switchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7e-tQ-PGM"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_knob_base" translatesAutoresizingMaskIntoConstraints="NO" id="MPY-Er-uFo">
+                                <rect key="frame" x="99" y="411" width="176" height="176"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="GWh-56-a7Y"/>
+                                    <constraint firstAttribute="width" constant="176" id="I5k-uJ-sDo"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_knob" translatesAutoresizingMaskIntoConstraints="NO" id="mD1-da-rwV">
+                                <rect key="frame" x="109" y="421" width="156" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="aPK-uR-O2v"/>
+                                    <constraint firstAttribute="width" constant="156" id="wZi-kL-zus"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DTL-1g-Uea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ah-1W-sO2"/>
+                            <constraint firstItem="mD1-da-rwV" firstAttribute="centerX" secondItem="MPY-Er-uFo" secondAttribute="centerX" id="ARa-2D-vgi"/>
+                            <constraint firstItem="I47-Eb-GgR" firstAttribute="top" secondItem="DTL-1g-Uea" secondAttribute="bottom" constant="22" id="AjS-Ji-EWa"/>
+                            <constraint firstItem="I47-Eb-GgR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PHy-br-XKG"/>
+                            <constraint firstItem="I47-Eb-GgR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="135" id="blW-7U-tU4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MPY-Er-uFo" secondAttribute="bottom" constant="80" id="dy6-jD-evW"/>
+                            <constraint firstItem="mD1-da-rwV" firstAttribute="centerY" secondItem="MPY-Er-uFo" secondAttribute="centerY" id="mIU-cK-ztY"/>
+                            <constraint firstItem="MPY-Er-uFo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nlS-WB-QVT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnSwitch" destination="DTL-1g-Uea" id="qYw-c1-9mO"/>
+                        <outlet property="imgKnob" destination="mD1-da-rwV" id="fka-pN-Hq4"/>
+                        <outlet property="imgKnobBase" destination="MPY-Er-uFo" id="Dfk-iJ-Y3b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="img_knob" width="156" height="156"/>
+        <image name="img_knob_base" width="176" height="176"/>
+        <image name="img_switch_off" width="162" height="105"/>
+        <image name="img_txt_colores" width="271" height="44"/>
+    </resources>
 </document>
