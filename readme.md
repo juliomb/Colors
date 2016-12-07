@@ -8,6 +8,6 @@
 **iOS Deployment Target:** 10.1
 
 #Description
-Simple app that allow you to play with colors using custom components.
+Simple app that allow you to play with colors using custom controls.
 
-**Working with:** Custom Components, CGAffineTransform, Trigonometry
+**Working with:** Custom Controls, CGAffineTransform, Trigonometry
